@@ -34,3 +34,41 @@ content:
 - Print dates of a year with an offset
 - Convert numbers to days
 - The first day of a month or not
+- The last day of a month
+- The n-th day from the end of a month
+- Some hours and minutes ago
+- Return time without seconds
+- Seconds between two time points
+- Seconds since start of a day
+- Add 11 hours and print the date
+- Subtracting hours and adding minutes
+- Whole hours between two date-time pairs
+- Add days and subtract hours
+- Merging date-time instances
+- Adding N minutes
+- The passed hours since the beginning of year
+- Who is who
+- Sort out the classes
+- Sum of the areas
+- Counting 2D shapes
+- Motor static factory
+- Clock factory
+- Static factory methods for Time
+- Remote Controller
+- Undo command
+- Stock Broker
+- Forex Broker
+- Clocks
+- Robot
+- Motors
+- Robot factory
+- Laptop store
+- Burger store
+- Template Method
+- Template Method
+- Laptop factory
+- Burgers
+- Phone factory
+- Convert to byte array
+- Serializable user
+- The Range class

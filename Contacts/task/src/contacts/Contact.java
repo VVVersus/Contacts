@@ -1,20 +1,34 @@
 package contacts;
 
+import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Contact {
-    private String name;
-    private String surname;
-    private String number;
+abstract class Contact implements Serializable {
+    String number;
+    boolean isPerson;
+    LocalDateTime creationTime;
+    LocalDateTime lastEditTime;
 
-    public Contact(String name, String surname, String number) {
-        this.name = name;
-        this.surname = surname;
+    public Contact(String number) {
+        this.creationTime = LocalDateTime.now();
+        this.lastEditTime = creationTime;
         setNumber(number);
     }
 
+    public boolean isPerson() {
+        return isPerson;
+    }
+
+    public void setPerson(boolean person) {
+        isPerson = person;
+    }
+
     public String getNumber() {
+        if (number.isEmpty()) {
+            return "[no data]";
+        }
         return number;
     }
 
@@ -24,22 +38,6 @@ public class Contact {
         } else {
             this.number = "";
         }
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
     }
 
     public boolean hasNumber() {
@@ -56,9 +54,11 @@ public class Contact {
         }
         return false;
     }
+    public abstract String getContactString();
 
-    @Override
-    public String toString() {
-        return name + " " + surname + ", " + (hasNumber() ? number : "[no number]");
-    }
+    public abstract String info();
+
+    public abstract String getFields();
+
+    public abstract boolean setField(String field, String value);
 }
