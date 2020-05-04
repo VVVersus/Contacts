@@ -72,3 +72,6 @@ content:
 - Convert to byte array
 - Serializable user
 - The Range class
+- Remove extra spaces
+- Remove HTML tags
+- Remove comments
